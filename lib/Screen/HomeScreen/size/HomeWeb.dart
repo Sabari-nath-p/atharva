@@ -1,5 +1,6 @@
 import 'package:atharva/Screen/HomeScreen/elements/AboutHome.dart';
 import 'package:atharva/Screen/HomeScreen/elements/Appbar.dart';
+import 'package:atharva/Screen/HomeScreen/elements/Eventslist.dart';
 import 'package:atharva/Screen/HomeScreen/elements/ImageSlider.dart';
 import 'package:atharva/Screen/HomeScreen/elements/titleText.dart';
 import 'package:flutter/material.dart';
@@ -29,7 +30,8 @@ class HomeWebScreen extends StatelessWidget {
                     Positioned(top: 200, left: 0, right: 0, child: TitleText())
                   ],
                 ),
-                AboutHome()
+                AboutHome(),
+                Eventslist()
               ],
             ),
           ),
