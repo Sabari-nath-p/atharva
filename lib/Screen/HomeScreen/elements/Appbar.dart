@@ -20,6 +20,7 @@ class AtharvaAppbar extends StatelessWidget {
             height: 50,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
+              color: Colors.white10,
               border: Border.all(color: Colors.red),
             ),
             child: Row(
@@ -27,45 +28,19 @@ class AtharvaAppbar extends StatelessWidget {
                 SizedBox(
                   width: 20,
                 ),
-                Text(
-                  "Home",
-                  style: GoogleFonts.poppins(
-                      fontWeight: FontWeight.w800,
-                      color: (true)
-                          ? const Color.fromARGB(255, 179, 18, 6)
-                          : Colors.white,
-                      fontSize: 17),
-                ),
+                _appbarElement("Home", 0, 0),
                 SizedBox(
                   width: 20,
                 ),
-                Text(
-                  "Workshop",
-                  style: GoogleFonts.poppins(
-                      fontWeight: FontWeight.w800,
-                      color: Colors.white,
-                      fontSize: 17),
-                ),
+                _appbarElement("Workshop", 1, 0),
                 SizedBox(
                   width: 20,
                 ),
-                Text(
-                  "Technical",
-                  style: GoogleFonts.poppins(
-                      fontWeight: FontWeight.w800,
-                      color: Colors.white,
-                      fontSize: 17),
-                ),
+                _appbarElement("Technical", 2, 0),
                 SizedBox(
                   width: 20,
                 ),
-                Text(
-                  "Non Technical",
-                  style: GoogleFonts.poppins(
-                      fontWeight: FontWeight.w800,
-                      color: Colors.white,
-                      fontSize: 17),
-                ),
+                _appbarElement("Non-Technical ", 3, 0),
                 SizedBox(
                   width: 20,
                 ),
@@ -79,4 +54,16 @@ class AtharvaAppbar extends StatelessWidget {
       ],
     );
   }
+}
+
+Widget _appbarElement(String buttonName, int selectedItem, int value) {
+  return Text(
+    "$buttonName",
+    style: GoogleFonts.nunitoSans(
+        fontWeight: (selectedItem == value) ? FontWeight.w800 : FontWeight.w500,
+        color: (selectedItem == value)
+            ? Color.fromARGB(255, 179, 18, 6)
+            : Colors.white.withOpacity(.8),
+        fontSize: 17),
+  );
 }
