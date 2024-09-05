@@ -1,3 +1,4 @@
+import 'package:atharva/Screen/HomeScreen/elements/AboutHome.dart';
 import 'package:atharva/Screen/HomeScreen/elements/ImageSlider.dart';
 import 'package:flutter/material.dart';
 
@@ -7,7 +8,7 @@ class HomeWebScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: [ImageSlider()],
+      children: [ImageSlider(), AboutHome()],
     );
   }
 }

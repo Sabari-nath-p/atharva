@@ -1,3 +1,4 @@
+import 'package:atharva/Screen/HomeScreen/elements/AboutHome.dart';
 import 'package:atharva/Screen/HomeScreen/elements/ImageSlider.dart';
 import 'package:flutter/material.dart';
 
@@ -8,7 +9,7 @@ class HomeMobileScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     double screenWidht = MediaQuery.of(context).size.width;
     return Column(
-      children: [ImageSlider()],
+      children: [ImageSlider(), AboutHome()],
     );
   }
 }
