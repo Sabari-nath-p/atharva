@@ -1,6 +1,7 @@
 import 'package:atharva/Screen/HomeScreen/elements/AboutHome.dart';
 import 'package:atharva/Screen/HomeScreen/elements/Appbar.dart';
 import 'package:atharva/Screen/HomeScreen/elements/ImageSlider.dart';
+import 'package:atharva/Screen/HomeScreen/elements/titleText.dart';
 import 'package:flutter/material.dart';
 
 class HomeMobileScreen extends StatelessWidget {
@@ -22,7 +23,15 @@ class HomeMobileScreen extends StatelessWidget {
           left: 0,
           child: SingleChildScrollView(
             child: Column(
-              children: [ImageSlider(), AboutHome()],
+              children: [
+                Stack(
+                  children: [
+                    ImageSlider(),
+                    Positioned(top: 200, left: 0, right: 0, child: TitleText())
+                  ],
+                ),
+                AboutHome()
+              ],
             ),
           ),
         ),

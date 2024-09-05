@@ -10,78 +10,73 @@ class TitleText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(left: 60),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+      child: Stack(
+        //crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Stack(
-            //  crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              SizedBox(
-                height: 300,
-              ),
-              Positioned(
-                top: 0,
-                left: 0,
-                right: 0,
-                height: 200,
-                child: Row(
+          SizedBox(
+            height: 300,
+          ),
+          Positioned(
+            top: 0,
+            left: 0,
+            right: 0,
+            height: 200,
+            child: Row(
+              children: [
+                Stack(
                   children: [
-                    Stack(
-                      children: [
-                        OutlinedText(
-                          text: Text(
-                            'Atharva 24',
-                            style: TextStyle(
-                                fontFamily: "atharva",
-                                fontSize: 120,
-                                color: Colors.transparent,
-                                fontWeight: FontWeight.w500),
-                          ),
-                          strokes: [
-                            OutlinedTextStroke(color: Colors.white, width: 1),
-                          ],
-                        ),
-                        GradientAnimationText(
-                          text: Text(
-                            'Atharva 24',
-                            style: TextStyle(
-                              fontFamily: "atharva",
-                              fontSize: 120,
-                              fontWeight: FontWeight.w500,
-                            ),
-                          ),
-                          colors: [
-                            // Colors.white,
-                            // Colors.white,
-                            // Colors.white,
-                            Colors.red,
-                            Colors.red,
-                            Colors.red,
-
-                            Colors.transparent,
-                          ],
-                          duration: Duration(seconds: 2),
-                          transform: GradientRotation(3.14 / 4), // tranform
-                        ),
+                    OutlinedText(
+                      text: Text(
+                        'Atharva 24',
+                        style: TextStyle(
+                            fontFamily: "atharva",
+                            fontSize: 120,
+                            color: Colors.transparent,
+                            fontWeight: FontWeight.w500),
+                      ),
+                      strokes: [
+                        OutlinedTextStroke(color: Colors.white, width: 1),
                       ],
+                    ),
+                    GradientAnimationText(
+                      text: Text(
+                        'Atharva 24',
+                        style: TextStyle(
+                          fontFamily: "atharva",
+                          fontSize: 120,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      colors: [
+                        // Colors.white,
+                        // Colors.white,
+                        // Colors.white,
+                        Colors.red,
+                        Colors.red,
+                        Colors.red,
+
+                        Colors.transparent,
+                      ],
+                      duration: Duration(seconds: 2),
+                      transform: GradientRotation(3.14 / 4), // tranform
                     ),
                   ],
                 ),
+              ],
+            ),
+          ),
+          Positioned(
+            top: 140,
+            left: 0,
+            right: 0,
+            child: Text(
+              "Innovation Unleased",
+              style: GoogleFonts.nunitoSans(
+                fontSize: 20,
+                color: Colors.white70,
+                fontWeight: FontWeight.w500,
               ),
-              Positioned(
-                top: 140,
-                left: 0,
-                right: 0,
-                child: Text(
-                  "Innovation Unleased",
-                  style: GoogleFonts.nunitoSans(
-                    fontSize: 20,
-                    color: Colors.white70,
-                    fontWeight: FontWeight.w500,
-                  ),
-                ),
-              ),
-            ],
+            ),
           ),
         ],
       ),
